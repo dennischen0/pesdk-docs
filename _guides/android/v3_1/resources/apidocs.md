@@ -15,5 +15,5 @@ tags: &tags # tags that are necessary
 published: true # Either published or not 
 
 redirect_to: 
-  - https://static.photoeditorsdk.com/docs/android/
+  - /apidocs/android/v3_1/
 ---
