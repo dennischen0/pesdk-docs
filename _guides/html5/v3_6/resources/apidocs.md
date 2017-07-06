@@ -1,6 +1,5 @@
 ---
 layout: guides/content
-menuitem: "Api Docs"
 platform: html5
 version: v3_6
 category: 

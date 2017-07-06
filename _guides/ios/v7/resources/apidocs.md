@@ -2,8 +2,6 @@
 layout: guides/content
 title: &title Api Docs # title as shown in the menu and
 
-menuitem: *title
-order: 1
 platform: ios
 version: v7
 category:

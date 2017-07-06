@@ -13,6 +13,8 @@
   <div class="documentation-subnavigation__container">
       {% include documentation/search_box.html platform=platform version=version %}
       {% include documentation/picker.html platform=platform version=version %}
+      {% capture api_url %}{{site.baseurl}}/guides/{{platform}}/{{version}}/resources/apidocs{% endcapture %}
+      {% include documentation/gray_button.html title="API Docs" link=api_url %}
       {% include documentation/spacer.html %}
       <ul class="documentation-subnavigation__list">
         {% if intropages.size > 0 or feature_pages.size > 0 or concept_pages.size > 0 or resource_pages.size > 0 %}
@@ -22,7 +24,7 @@
               {% for p in intropages %}
                 <li class="documentation-subnavigation__list__item">
                   {% if p.url == page.url %}
-                    <a class="is-active" href="{{site.baseurl}}{{site.baseurl}}{{p.url}}">{{p.menuitem}}</a>
+                    <a class="is-active" href="{{site.baseurl}}{{p.url}}">{{p.menuitem}}</a>
                   {% else %}
                     <a href="{{site.baseurl}}{{p.url}}"> {{p.menuitem}} </a>
                   {% endif %}
