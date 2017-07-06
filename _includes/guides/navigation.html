@@ -1,34 +1,43 @@
+{% assign current_platform = include.platform %}
+{% assign platforms = "Html5|iOS|Android" | split: "|" %}
 <nav class="navigation">
   <div class="navigation__burger js-toggle-navigation"></div>
   <div class="navigation__container js-navigation">
     <div class="navigation__innerContainer">
       <div class="navigation__close js-toggle-navigation"></div>
-      <ul class="navigation--center">
-        <li class="navigation__item">
-          <a href="{{ site.baseurl }}/guides" class="track-nav-guides">
-            We
-          </a>
-        </li>
-        <li class="navigation__item">
-          <a href="{{ site.baseurl }}/apidocs" class="track-nav-apidocs" >
-            Are
-          </a>
-        </li>
-        <!--<li class="navigation__item">
-          <a href="{{ site.baseurl }}/features" class="track-nav-features">
-            Features
-          </a>
-        </li>-->
+      <ul class="navigation--left">
+        {% for platform in platforms %}
+          {% assign platform_downcase = platform | downcase %}
+          {% if platform_downcase == current_platform %}
+            <li class="navigation__item navigation__item--active">
+              <a href="{{ site.baseurl }}/guides/{{platform_downcase}}" class="track-nav-guides">
+                {{platform}}
+              </a>
+            </li>
+          {% else %}
+            <li class="navigation__item">
+              <a href="{{ site.baseurl }}/guides/{{platform_downcase}}" class="track-nav-guides">
+                {{platform}}
+              </a>
+            </li>
+          {% endif %}
+        {% endfor %}
+        <li class="navigation__separator" />
         <li class="navigation__item">
           <a href="{{ site.baseurl }}/quickstarts" class="track-nav-quickstarts">
-            Guides
+            Quickstarts
+          </a>
+        </li>
+        <li class="navigation__item">
+          <a href="{{ site.baseurl }}/features" class="track-nav-features">
+            Features
           </a>
         </li>
       </ul>
       <ul class="navigation--right">
         <li class="navigation__item">
           <a href="https://www.photoeditorsdk.com/login" class="track-nav-dashboard">
-            !
+            Login
           </a>
         </li>
         <!--<il class="navigation--item">
