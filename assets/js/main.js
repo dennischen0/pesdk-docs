@@ -4,6 +4,12 @@ $(window).ready(function () {
   toggle.click(() => {
     $(navigation).toggleClass('is-visible')
   })
+
+  const versionPicker = $('.js-toggle-version-picker')
+  const content = $('.js-version-picker-content')
+  versionPicker.click(() => {
+    $(content).toggleClass('is-visible')
+  })
 })
 
 // Used to toggle different languages in code blocks
