@@ -1,18 +1,18 @@
 ---
 layout: guides/content
-title: &title Overview # title as shown in the menu and 
+title: &title Overview # title as shown in the menu and
 description: The PhotoEditor SDK for HTML5 provides all the tools necessary to enhance your product with state-of-the-art photo editing features, effects, and assets.
 menuitem: Overview
 order: 0
 platform: html5
 version: v3_6
-category: 
+category:
   - guide
   - introduction
 tags: &tags # tags that are necessary
-  - photo editor 
+  - photo editor
 
-published: true # Either published or not 
+published: true # Either published or not
 ---
 
 
@@ -40,15 +40,15 @@ to purchase the commercial license.
 Our photo editor consists of two parts:
 
 ### Framework
-  The SDK handles the image processing. 
+  The SDK handles the image processing.
   It provides many powerful operations like cropping, image
   orientation, beautiful filters, adjustments, text and sticker overlays and much more. It's the
   heart of our editor and it's easily extensible with custom filters or even custom operations.
   The engine handles image rendering at the lowest level. With a simple scene graph based API, it
   combines and abstracts the complicated WebGL and Canvas2D APIs. Its highly performant architecture
-  even allows you to do real-time rendering. 
+  even allows you to do real-time rendering.
   The engine is not covered in this documentation. Go to
-  our [API documentation](http://static.photoeditorsdk.com/docs/html5/PhotoEditorSDK.Engine.html) to
+  our [API documentation](https://docs.photoeditorsdk.com/apidocs/html5/v3_6/PhotoEditorSDK.Engine.html) to
   learn more about it.
 
 ### User Interface

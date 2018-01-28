@@ -7,17 +7,17 @@ menuitem: *title
 order: 0
 platform: html5
 version: v3_6
-category: 
+category:
   - guide
   - concept
 tags: &tags # tags that are necessary
-  - photo editor 
+  - photo editor
 
-published: true # Either published or not 
+published: true # Either published or not
 ---
 
 
-To export the resulting image as an `Image` object or as a data url, you can use the [`export`](http://static.photoeditorsdk.com/docs/html5/PhotoEditorSDK.html#export)
+To export the resulting image as an `Image` object or as a data url, you can use the [`export`](https://docs.photoeditorsdk.com/apidocs/html5/v3_6/PhotoEditorSDK.html#export)
 method:
 
 ```js
@@ -30,5 +30,5 @@ sdk.export(
 })
 ```
 
-See the API documentation for available [`RenderTypes`](http://static.photoeditorsdk.com/docs/html5/PhotoEditorSDK.html#.RenderType)
-and [`ImageFormats`](http://static.photoeditorsdk.com/docs/html5/PhotoEditorSDK.html#.ImageFormat)
+See the API documentation for available [`RenderTypes`](https://docs.photoeditorsdk.com/apidocs/html5/v3_6/PhotoEditorSDK.html#.RenderType)
+and [`ImageFormats`](https://docs.photoeditorsdk.com/apidocs/html5/v3_6/PhotoEditorSDK.html#.ImageFormat)
