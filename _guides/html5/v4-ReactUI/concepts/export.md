@@ -17,7 +17,7 @@ published: true # Either published or not
 ---
 
 
-To export the resulting image as an `Image` object or as a data url, you can use the [`export`](http://static.photoeditorsdk.com/docs/html5/PhotoEditorSDK.html#export) method:
+To export the resulting image as an `Image` object or as a data url, you can use the [`export`](https://docs.photoeditorsdk.com/apidocs/html5/v4/PhotoEditorSDK.html#export) method:
 
 ```js
 sdk.export(false)
@@ -26,4 +26,4 @@ sdk.export(false)
   })
 ```
 
-The export format (e.g. DataURL or Image) and file format (e.g. PNG or JPEG) can be specified using the editor configuration. See the API documentation for available [`RenderTypes`](http://static.photoeditorsdk.com/docs/html5/PhotoEditorSDK.html#.RenderType) and [`ImageFormats`](http://static.photoeditorsdk.com/docs/html5/PhotoEditorSDK.html#.ImageFormat). When exporting using the `DATAURL` format, you can pass the resulting Data URL to a server, decode it there and write it to a file.
+The export format (e.g. DataURL or Image) and file format (e.g. PNG or JPEG) can be specified using the editor configuration. See the API documentation for available [`RenderTypes`](https://docs.photoeditorsdk.com/apidocs/html5/v4/PhotoEditorSDK.html#.RenderType) and [`ImageFormats`](https://docs.photoeditorsdk.com/apidocs/html5/v4/PhotoEditorSDK.html#.ImageFormat). When exporting using the `DATAURL` format, you can pass the resulting Data URL to a server, decode it there and write it to a file.
