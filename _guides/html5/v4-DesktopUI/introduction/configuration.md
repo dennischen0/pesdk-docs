@@ -48,7 +48,7 @@ to the `options` object passed to the UI:
     * `tools` Array - The enabled tools. Available are: `transform`, `filter`, `adjustments`, `focus`, `text`, `sticker`, `brush`, `frame` and `overlay`
     * `controlsOrder` Array - The order in which the controls are displayed. Available are `library`, `transform`, `filter`, `adjustments`, `focus`, `text`, `sticker`, `brush`, `frame` and `overlay`. Can be grouped in arrays which will be displayed with separators.
     * `operationsOrder` Array - The order in which operations are added to the stack. Changing this may have a negative impact on performance.
-    * `controlsOptions` Object - Objects passed to the controls. See [the documentation](http://static.photoeditorsdk.com/docs/html5/PhotoEditorSDK.UI.DesktopUI.Controls.html) for available controls and their options.
+    * `controlsOptions` Object - Objects passed to the controls. See [the documentation](https://docs.photoeditorsdk.com/apidocs/html5/v4/PhotoEditorSDK.UI.DesktopUI.Controls.html) for available controls and their options.
 
     * `export` Object
       * `format` String - The mime type of the exported image. Defaults to `image/png`. Available formats vary by browser.

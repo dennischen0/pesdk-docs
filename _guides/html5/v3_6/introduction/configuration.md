@@ -60,7 +60,7 @@ to the `options` object passed to the UI:
         be grouped in arrays which will be displayed with separators.
     * `operationsOrder` Array - The order in which operations are added to the stack. Changing
         this may have a negative impact on performance.
-    * `controlsOptions` Object - Objects passed to the controls. See [the documentation](http://static.photoeditorsdk.com/docs/html5/PhotoEditorSDK.UI.ReactUI.Controls.html) for available controls and their options.
+    * `controlsOptions` Object - Objects passed to the controls. See [the documentation](https://docs.photoeditorsdk.com/apidocs/html5/v3_6/PhotoEditorSDK.UI.ReactUI.Controls.html) for available controls and their options.
     * `maxMegaPixels` Object - Specifies the maximum amount of megapixels per device type
       * `desktop` Number - Defaults to 10
       * `mobile` Number - Defaults to 5

@@ -117,4 +117,4 @@ This was all required to get the PhotoEditor SDK up and running. For simplicity 
 Launch your favorite webserver and enjoy our editor. If you don't know which webserver to use, give `python -m SimpleHTTPServer 8000`` a try.
 
 
-In any case, you can find a working demo integration [here](http://static.photoeditorsdk.com/demo/).
+In any case, you can find a working demo integration [here](https://www.photoeditorsdk.com).

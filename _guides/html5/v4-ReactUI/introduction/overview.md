@@ -48,7 +48,7 @@ Our photo editor consists of two parts:
   combines and abstracts the complicated WebGL and Canvas2D APIs. Its highly performant architecture
   even allows you to do real-time rendering.
   The engine is not covered in this documentation. Go to
-  our [API documentation](http://static.photoeditorsdk.com/docs/html5/PhotoEditorSDK.Engine.html) to
+  our [API documentation](https://docs.photoeditorsdk.com/apidocs/html5/v4/PhotoEditorSDK.Engine.html) to
   learn more about it.
 
 ### User Interface

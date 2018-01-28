@@ -16,7 +16,7 @@ published: true # Either published or not
 ---
 
 
-Integrating our editor into your web application is easy as pie. However, if you can't wait  to see the editor in action you can find a working demo integration [here](http://static.photoeditorsdk.com/demo/).
+Integrating our editor into your web application is easy as pie. However, if you can't wait  to see the editor in action you can find a working demo integration [here](https://www.photoeditorsdk.com).
 
 
 First, download the [latest release](https://github.com/imgly/pesdk-html5-build/releases/latest) from our public GitHub repository and extract it.
@@ -117,4 +117,4 @@ This was all required to get the PhotoEditor SDK up and running. For simplicity 
 Launch your favorite webserver and enjoy our editor. If you don't know which webserver to use, give `python -m SimpleHTTPServer 8000`` a try.
 
 
-In any case, you can find a working demo integration [here](http://static.photoeditorsdk.com/demo/).
+In any case, you can find a working demo integration [here](https://www.photoeditorsdk.com).
