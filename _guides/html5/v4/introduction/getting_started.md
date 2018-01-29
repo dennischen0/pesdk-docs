@@ -5,7 +5,7 @@ description: A quick guide on how to easily get started with the PhotoEditor SDK
 order: 1
 menuitem: Getting Started
 platform: html5
-version: v4-DesktopUI
+version: v4
 category:
   - guide
   - introduction
@@ -65,6 +65,10 @@ For the sake of simplicity, specify the dimensions using inline styles:
 
 Finally, in order to initialize the editor, instantiate the UI using JavaScript. Add the following code right below our containing `<div>` element:
 
+
+{% capture first_snippet %}
+DesktopUI
+---
 ```html
 <script>
   window.onload = function () {
@@ -79,6 +83,31 @@ Finally, in order to initialize the editor, instantiate the UI using JavaScript.
   }
 </script>
 ```
+{% endcapture %}
+
+{% capture second_snippet %}
+ReactUi
+---
+```html
+<script>
+  window.onload = function () {
+    var container = document.getElementById('editor')
+    var editor = new PhotoEditorSDK.UI.DesktopUI({
+      container: container,
+      license: 'YOUR_LICENSE', // <-- Please replace this with your license. Please make sure this is in *string* format, not *object*.
+      assets: {
+        baseUrl: '/assets' // <-- This should be the absolute path to your `assets` directory
+      }
+    })
+  }
+</script>
+```
+{% endcapture %}
+
+{% assign snippets = "" | split: "" | push: first_snippet | push: second_snippet %}
+{% capture identifier %}{{page.title}}-{{page.version}}-ANALYTICS{% endcapture %}
+{% include multilingual_code_block.html snippets=snippets identifier=identifier %}
+
 
 This was all required to get the PhotoEditor SDK up and running. For simplicity here is the whole source code of  the *html* file:
 
