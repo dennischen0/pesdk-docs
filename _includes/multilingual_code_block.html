@@ -18,7 +18,7 @@
 			{% assign code = snippet_components[1] %}
 			{% assign title = snippet_components[0] %}
 			<div class="multilingual-code-block__tabcontents__item" id='{{include.identifier | cgi_escape}}_{{title | cgi_escape}}'>
-				{{code | markdownify }}
+				{{ code | markdownify }}
 			</div>
 		{% endfor %}
 	</div>

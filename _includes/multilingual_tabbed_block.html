@@ -1,0 +1,25 @@
+<div class="multilingual-tabbed-block" id="{{include.identifier | cgi_escape}}">
+	<div class='multilingual-tabbed-block__tabs'>
+		{% for snippet in include.snippets %}
+			{% assign snippet_components = snippet | split: "---" %}
+			{% assign title = snippet_components[0] %}
+			{% assign button_class = 'multilingual-tabbed-block__tabs__button' %}
+			{% if forloop.index == 1 %}
+				{% assign button_class = 'multilingual-tabbed-block__tabs__button is-active' %}
+			{% endif %}
+			<button class="{{button_class}}" onclick="showCodeBlockLanguage(event,'{{include.identifier | cgi_escape}}','{{title | cgi_escape}}', 'multilingual-tabbed-block')" >
+				{{title}}
+			</button>
+		{% endfor %}
+	</div>
+	<div class="multilingual-tabbed-block__tabcontents">
+		{% for snippet in include.snippets %}
+			{% assign snippet_components = snippet | split: "---" %}
+			{% assign code = snippet_components[1] %}
+			{% assign title = snippet_components[0] %}
+			<div class="multilingual-tabbed-block__tabcontents__item" id='{{include.identifier | cgi_escape}}_{{title | cgi_escape}}'>
+				{{ code | markdownify }}
+			</div>
+		{% endfor %}
+	</div>
+</div>

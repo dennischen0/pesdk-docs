@@ -33,7 +33,8 @@ All example intergrations repositories are tagged with the suffix `-demo`. In ge
 
   * [Ruby on Rails](https://github.com/imgly/pesdk-rails-demo)
   * [Ruby on Rails Engine/Gem](https://github.com/imgly/pesdk-ruby-gem-demo)
-  * ...
+  * [React](https://github.com/imgly/pesdk-react-demo)
+  * [Angular](https://github.com/imgly/pesdk-angular-demo)
 
 We are also providing the corresponding tutorials in our quickstart section [here]({{ site.baseurl }}/quickstarts), if you want to learn to integrate the SDK yourself. This includes:
 

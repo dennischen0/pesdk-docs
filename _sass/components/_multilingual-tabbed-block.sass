@@ -1,0 +1,34 @@
++block(multilingual-tabbed-block)
+	+element(tabs)
+		overflow: hidden
+
+		+element(button)
+			background: $white-color
+			float: left
+			border: 1px solid #eee
+			border-bottom: 0
+			cursor: pointer
+			color: $text-color
+			padding: 6px 12px
+			margin: 0
+			margin-right: -1px
+			font-size: 14px
+
+			&:focus
+				outline: none
+
+			+flag(active)
+				color: $primary-color
+
+	+element(tabcontents)
+		padding-top: 16px
+		border: 1px solid #eee
+		+element(item)
+			display: none
+
+			&:first-of-type
+				display: block
+
+	pre
+		border-top-left-radius: 0
+		border-top-right-radius: 0

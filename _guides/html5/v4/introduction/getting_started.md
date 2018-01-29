@@ -61,7 +61,7 @@ DesktopUI
 {% endcapture %}
 
 {% capture second_snippet %}
-ReactUi
+ReactUI
 ---
 ```html
 <head>
@@ -111,7 +111,7 @@ DesktopUI
 {% endcapture %}
 
 {% capture second_snippet %}
-ReactUi
+ReactUI
 ---
 ```html
 <script>
@@ -173,7 +173,7 @@ DesktopUI
 {% endcapture %}
 
 {% capture second_snippet %}
-ReactUi
+ReactUI
 ---
 ```html
 <!DOCTYPE html>

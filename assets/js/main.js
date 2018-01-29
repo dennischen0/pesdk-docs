@@ -13,15 +13,19 @@ $(window).ready(function () {
 })
 
 // Used to toggle different languages in code blocks
-function showCodeBlockLanguage(event, codeblock_id, language_id) {
+function showCodeBlockLanguage(event, codeblock_id, language_id, prefix) {
+
+	if (!prefix) {
+		prefix = "multilingual-code-block"
+	}
 	let rootElement = document.getElementById(codeblock_id)
 
-	let tabcontents = rootElement.getElementsByClassName("multilingual-code-block__tabcontents__item")
+	let tabcontents = rootElement.getElementsByClassName(prefix + "__tabcontents__item")
 	for (i = 0; i < tabcontents.length; i++) {
 		tabcontents[i].style.display = 'none'
 	}
 
-	let tabbuttons = rootElement.getElementsByClassName("multilingual-code-block__tabs__button")
+	let tabbuttons = rootElement.getElementsByClassName(prefix + "__tabs__button")
 	for (i = 0; i < tabbuttons.length; i++) {
 		tabbuttons[i].className = tabbuttons[i].className.replace(" is-active", "")
 	}
