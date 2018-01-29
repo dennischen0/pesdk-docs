@@ -43,6 +43,9 @@ Furthermore, The `css` folder containts all *stylesheets* for the PhotoEditor SD
 In order to get started, copy the folders `assets`, `css` and `js` into your project.
 Then include the SDK and the UI JavaScript files in your as well as the CSS files inside your `<head>` tag:
 
+{% capture first_snippet %}
+DesktopUI
+---
 ```html
 <head>
   <!-- React Dependencies for the SDK UI -->
@@ -55,6 +58,28 @@ Then include the SDK and the UI JavaScript files in your as well as the CSS file
   <link rel="stylesheet" href="css/PhotoEditorSDK.UI.DesktopUI.css" />
 </head>
 ```
+{% endcapture %}
+
+{% capture second_snippet %}
+ReactUi
+---
+```html
+<head>
+  <!-- React Dependencies for the SDK UI -->
+  <script src="js/vendor/react.min.js"></script>
+  <script src="js/vendor/react-dom.min.js"></script>
+  <!-- PhotoEditor SDK-->
+  <script src="js/PhotoEditorSDK.min.js"></script>
+  <!-- PhotoEditor SDK UI -->
+  <script src="js/PhotoEditorReactUI.min.js"></script>
+  <link rel="stylesheet" href="css/PhotoEditorReactUI.min.css" />
+</head>
+```
+{% endcapture %}
+
+{% assign snippets = "" | split: "" | push: first_snippet | push: second_snippet %}
+{% capture identifier %}{{page.title}}-{{page.version}}-ANALYTICS{% endcapture %}
+{% include multilingual_code_block.html snippets=snippets identifier=identifier %}
 
 Now, create a `<div>` tag as a container for the editor. The editor will adapt its size according to the dimensions of the container.
 For the sake of simplicity, specify the dimensions using inline styles:
@@ -92,7 +117,7 @@ ReactUi
 <script>
   window.onload = function () {
     var container = document.getElementById('editor')
-    var editor = new PhotoEditorSDK.UI.DesktopUI({
+    var editor = new PhotoEditorSDK.UI.ReactUI({
       container: container,
       license: 'YOUR_LICENSE', // <-- Please replace this with your license. Please make sure this is in *string* format, not *object*.
       assets: {
@@ -105,12 +130,15 @@ ReactUi
 {% endcapture %}
 
 {% assign snippets = "" | split: "" | push: first_snippet | push: second_snippet %}
-{% capture identifier %}{{page.title}}-{{page.version}}-ANALYTICS{% endcapture %}
+{% capture identifier %}{{page.title}}-{{page.version}}-ANALYTICS-02{% endcapture %}
 {% include multilingual_code_block.html snippets=snippets identifier=identifier %}
 
 
 This was all required to get the PhotoEditor SDK up and running. For simplicity here is the whole source code of  the *html* file:
 
+{% capture first_snippet %}
+DesktopUI
+---
 ```html
 <!DOCTYPE html>
 <html>
@@ -142,6 +170,47 @@ This was all required to get the PhotoEditor SDK up and running. For simplicity 
   </body>
 </html>
 ```
+{% endcapture %}
+
+{% capture second_snippet %}
+ReactUi
+---
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- React Dependencies for the SDK UI -->
+    <script src="js/vendor/react.min.js"></script>
+    <script src="js/vendor/react-dom.min.js"></script>
+    <!-- PhotoEditor SDK-->
+    <script src="js/PhotoEditorSDK.min.js"></script>
+    <!-- PhotoEditor SDK UI -->
+    <script src="js/PhotoEditorReactUI.min.js"></script>
+    <link rel="stylesheet" href="css/PhotoEditorReactUI.min.css" />
+  </head>
+
+  <body>
+    <div id="editor" style="width: 100vw; height: 100vh;"></div>
+    <script>
+      window.onload = function () {
+        var container = document.getElementById('editor')
+        var editor = new PhotoEditorSDK.UI.ReactUI({
+          container: container,
+          license: 'YOUR_LICENSE', // <-- Please replace this with your license. Please make sure this is in *string* format, not *object*.
+          assets: {
+            baseUrl: '/assets' // <-- This should be the absolute path to your `assets` directory
+          }
+        })
+      }
+    </script>
+  </body>
+</html>
+```
+{% endcapture %}
+
+{% assign snippets = "" | split: "" | push: first_snippet | push: second_snippet %}
+{% capture identifier %}{{page.title}}-{{page.version}}-ANALYTICS-03{% endcapture %}
+{% include multilingual_code_block.html snippets=snippets identifier=identifier %}
 
 Launch your favorite webserver and enjoy our editor. If you don't know which webserver to use, give `python -m SimpleHTTPServer 8000`` a try.
 
