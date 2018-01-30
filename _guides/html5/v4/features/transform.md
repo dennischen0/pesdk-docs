@@ -5,7 +5,7 @@ description: The transform tool of the PhotoEditor SDK for HTML5 unifies croppin
 menuitem: *title
 order: 3
 platform: html5
-version: v4-DesktopUI
+version: v4
 category:
   - guide
   - feature
@@ -16,6 +16,7 @@ published: true # Either published or not
 ---
 ![{{page.title}} tool]({{ site.baseurl }}/assets/images/guides/{{page.platform | downcase }}/{{page.version | downcase}}/{{page.title | downcase}}.jpg){: .center-image style="padding: 20px; max-height: 400px;"}
 
+{% include html5_ui_badge.html react=true desktop=true %}
 
 Our transform tool unifies cropping, flipping and rotation operations in one feature. The PhotoEditor SDK holds various preset crop ratios (e.g. 16:9) that can easily be complemented by any crop ratio you deem necessary.
 

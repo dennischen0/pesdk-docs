@@ -5,7 +5,7 @@ description: The PhotoEditor SDK for HTML5 ships with a preset sticker library c
 menuitem: *title
 order: 5
 platform: html5
-version: v4-DesktopUI
+version: v4
 category:
   - guide
   - feature
@@ -15,6 +15,8 @@ tags: &tags # tags that are necessary
 published: true # Either published or not
 ---
 ![{{page.title}} tool]({{ site.baseurl }}/assets/images/guides/{{page.platform | downcase }}/{{page.version | downcase}}/{{page.title | downcase}}.jpg){: .center-image style="padding: 20px; max-height: 400px;"}
+
+{% include html5_ui_badge.html react=true desktop=true %}
 
 The PhotoEditor SDK ships with a categorized sticker library whose UI is optimized for exploration and discovery. You can easily leverage the API to complement the library with your custom sticker packages.
 

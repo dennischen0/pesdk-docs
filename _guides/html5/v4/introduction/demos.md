@@ -5,7 +5,7 @@ description: For a straightforward integration of the PhotoEditor SDK, see our s
 menuitem: Demos
 order: 3
 platform: html5
-version: v4-DesktopUI
+version: v4
 category:
   - guide
   - introduction

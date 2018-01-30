@@ -4,7 +4,7 @@ title: &title Getting Started # title as shown in the menu and
 order: 1
 menuitem: *title
 platform: html5
-version: v4-DesktopUI
+version: v4
 category:
   - guide
 

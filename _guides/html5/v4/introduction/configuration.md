@@ -6,7 +6,7 @@ description: The PhotoEditor SDK for HTML5 can easily be tailored to meet your b
 menuitem: Configuration
 order: 2
 platform: html5
-version: v4-DesktopUI
+version: v4
 category:
   - guide
   - introduction

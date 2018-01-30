@@ -5,7 +5,7 @@ description: The PhotoEditor SDK for HTML5 provides all the tools necessary to e
 menuitem: Overview
 order: 0
 platform: html5
-version: v4-DesktopUI
+version: v4
 versions:
   - v4-DesktopUI
   - v4-ReactUI

@@ -72,9 +72,9 @@ defaults:
       description: "A quick guide on how to easily get started with the PhotoEditor SDK for HTML5. Your kick-off to delight your users with top-notch editing capabilities."
 
   - scope:
-      path: "guides/html5/v4-DesktopUI"
+      path: "guides/html5/v4"
     values:
-      version: "v4-DesktopUI"
+      version: "v4"
 
 # IOS
   - scope:

@@ -5,7 +5,7 @@ description: The PhotoEditor SDK for HTML5 provides a quick and easy way for add
 menuitem: *title
 order: 6
 platform: html5
-version: v4-DesktopUI
+version: v4
 category:
   - guide
   - feature
@@ -13,6 +13,7 @@ published: true # Either published or not
 ---
 ![{{page.title}} tool]({{ site.baseurl }}/assets/images/guides/{{page.platform | downcase }}/{{page.version | downcase}}/{{page.title | downcase}}.jpg){: .center-image style="padding: 20px; max-height: 400px;"}
 
+{% include html5_ui_badge.html react=true desktop=true %}
 
 Good frames might not save bad paintings, however they may very well complete and enhance good photography. The PhotoEditor SDK includes a versatile frame tool that works with any given photo size or ratio. For the flexible frames tool that works perfectly for creatives with repeatable or stretchable areas, we abandoned the 9-patch standard and replaced it with a novel and even more flexible 12-patch layout.
 

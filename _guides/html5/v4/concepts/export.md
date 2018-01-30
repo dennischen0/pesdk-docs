@@ -6,7 +6,7 @@ description: By default, the PhotoEditor SDK for HTML5 exports to your user's de
 menuitem: *title
 order: 0
 platform: html5
-version: v4-DesktopUI
+version: v4
 category:
   - guide
   - concept
@@ -16,6 +16,7 @@ tags: &tags # tags that are necessary
 published: true # Either published or not
 ---
 
+{% include html5_ui_badge.html react=true desktop=true %}
 
 To export the resulting image as an `Image` object or as a data url, you can use the [`export`](https://docs.photoeditorsdk.com/apidocs/html5/v4/PhotoEditorDesktopUI.html#export) method:
 

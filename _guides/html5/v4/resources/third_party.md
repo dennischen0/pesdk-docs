@@ -5,7 +5,7 @@ title: &title Third Party # title as shown in the menu and
 menuitem: *title
 order: 5
 platform: html5
-version: v4-DesktopUI
+version: v4
 category:
   - guide
   - resource

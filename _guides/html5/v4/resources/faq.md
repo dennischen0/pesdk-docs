@@ -5,7 +5,7 @@ description: A collection of frequently asked questions for the PhotoEditor SDK 
 menuitem: *title
 order: 0
 platform: html5
-version: v4-DesktopUI
+version: v4
 category:
   - guide
   - resource

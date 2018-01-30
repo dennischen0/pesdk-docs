@@ -6,7 +6,7 @@ description: The PhotoEditor SDK for HTML5 can be localized easily. Learn how to
 menuitem: *title
 order: 0
 platform: html5
-version: v4-DesktopUI
+version: v4
 category:
   - guide
   - customization
@@ -16,6 +16,7 @@ tags: &tags # tags that are necessary
 published: true # Either published or not
 ---
 
+{% include html5_ui_badge.html react=true desktop=true %}
 
 International web applications have international users. That's why our editor is already available in English (EN) and German (DE) and you can easily switch languages by adding the `language` String (Defaults to `en`) property to the `options` object passed to the UI. Check the [configuration section](https://docs.photoeditorsdk.com/guides/html5/v4-DesktopUI/introduction/configuration) for further information. To add custom languages to our UI, you can pass them using the `extensions.languages` object. The `language` option
 specifies the language that the UI should use.

@@ -1,7 +1,7 @@
 ---
 layout: guides/content
 platform: html5
-version: v4-DesktopUI
+version: v4
 category:
   - guide
   - resource

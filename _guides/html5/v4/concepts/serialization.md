@@ -5,7 +5,7 @@ description: The PhotoEditor SDK for HTML5 provides an option for serialization 
 menuitem: *title
 order: 0
 platform: html5
-version: v4-DesktopUI
+version: v4
 category:
   - guide
   - concept
@@ -15,6 +15,7 @@ tags: &tags # tags that are necessary
 published: true # Either published or not
 ---
 
+{% include html5_ui_badge.html react=true desktop=true %}
 
 Since version 3.4.2, PhotoEditorSDK's Editor UI supports serialization and deserialization of
 application states. This means that you can export the current state of the editor and import

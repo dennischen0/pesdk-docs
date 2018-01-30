@@ -1,8 +1,8 @@
 ---
 layout: guides/content
 redirect_to:
-  - '/guides/html5/v4-DesktopUI/customization/localization'
-version: v4-DesktopUI
+  - '/guides/html5/v4/customization/localization'
+version: v4
 ---
 
 <!--
