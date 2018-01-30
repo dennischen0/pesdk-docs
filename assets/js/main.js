@@ -9,7 +9,12 @@ $(window).ready(function () {
   const content = $('.js-version-picker-content')
   versionPicker.click(() => {
     $(content).toggleClass('is-visible')
-  })
+	})
+	$('.image-carousel').slick({
+		dots: true,
+		autoplay: true,
+		autoplaySpeed: 3000
+	})
 })
 
 // Used to toggle different languages in code blocks

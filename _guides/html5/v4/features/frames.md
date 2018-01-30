@@ -11,7 +11,17 @@ category:
   - feature
 published: true # Either published or not
 ---
-![{{page.title}} tool]({{ site.baseurl }}/assets/images/guides/{{page.platform | downcase }}/{{page.version | downcase}}/{{page.title | downcase}}.jpg){: .center-image style="padding: 20px; max-height: 400px;"}
+<!-- ![{{page.title}} tool]({{ site.baseurl }}/assets/images/guides/{{page.platform | downcase }}/{{page.version | downcase}}/{{page.title | downcase}}.jpg){: .center-image style="padding: 20px; max-height: 400px;"} -->
+
+{% capture image_desktop %}
+{{ site.baseurl }}/assets/images/guides/{{page.platform | downcase }}/{{page.version | downcase}}/{{page.title | downcase}}.jpg
+{% endcapture %}
+{% capture image_react %}
+{{ site.baseurl }}/assets/images/guides/{{page.platform | downcase }}/{{page.version | downcase}}/{{page.title | downcase}}_react.jpg
+{% endcapture %}
+
+{% assign images = "" | split: "" | push: image_desktop | push: image_react %}
+{% include image_carousel.html images=images %}
 
 {% include html5_ui_badge.html react=true desktop=true %}
 
