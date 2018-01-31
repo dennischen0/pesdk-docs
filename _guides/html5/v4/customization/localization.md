@@ -57,6 +57,9 @@ const editor = new PhotoEditorSDK.UI.ReactUI({
 The language objects should have the same structure as our default languages. Here is the English
 language object as an example:
 
+{% capture first_snippet %}
+DesktopUI
+---
 ```json
 {
   "editor": {
@@ -313,3 +316,233 @@ language object as an example:
 }
 
 ```
+{% endcapture %}
+
+{% capture second_snippet %}
+ReactUI
+---
+
+```json
+{
+  "controls": {
+    "overview": {
+      "filters": "Filters",
+      "adjustments": "Adjust",
+      "transform": "Transform",
+      "focus": "Focus",
+      "frame": "Frame",
+      "sticker": "Sticker",
+      "text": "Text",
+      "brush": "Brush",
+      "selective-blur": "Selective Blur"
+    },
+    "text": {
+      "foreground": "Foreground",
+      "background": "Background",
+      "size": "Size",
+      "font": "Font",
+      "alignment": "Alignment",
+      "takeToFront": "To Front",
+      "defaultText": "Double-click to edit"
+    },
+    "adjustments": {
+      "brightness": "Brightness",
+      "contrast": "Contrast",
+      "saturation": "Saturation",
+      "exposure": "Exposure",
+      "gamma": "Gamma",
+      "shadows": "Shadows",
+      "highlights": "Highlights",
+      "clarity" : "Clarity"
+    },
+    "transform": {
+      "none": "Original",
+      "rotation": "Rotation"
+    },
+    "focus": {
+      "none": "None",
+      "radial": "Radial",
+      "mirrored": "Mirrored",
+      "blurRadius": "Blur radius"
+    },
+    "selectiveBlur": {
+      "blurRadius": "Blur radius",
+      "size": "Size"
+    },
+    "filter": {
+      "intensity": "Intensity",
+      "filters": {
+        "identity": "None",
+        "imgly_lut_ad1920": "1920 A.D.",
+        "imgly_lut_ancient": "Ancient",
+        "imgly_lut_bleached": "Bleached",
+        "imgly_lut_bleachedblue": "Bleached Blue",
+        "imgly_lut_blues": "Blues",
+        "imgly_lut_blueshadows": "Blue Shadows",
+        "imgly_lut_breeze": "Breeze",
+        "imgly_lut_bw": "B & W",
+        "imgly_lut_classic": "Classic",
+        "imgly_lut_colorful": "Colorful",
+        "imgly_lut_cool": "Cool",
+        "imgly_lut_cottoncandy": "Cotton Candy",
+        "imgly_lut_creamy": "Creamy",
+        "imgly_lut_eighties": "Eighties",
+        "imgly_lut_elder": "Elder",
+        "imgly_lut_evening": "Evening",
+        "imgly_lut_fall": "Fall",
+        "imgly_lut_food": "Food",
+        "imgly_lut_glam": "Glam",
+        "imgly_lut_gobblin": "Gobblin",
+        "imgly_lut_highcarb": "High Carb",
+        "imgly_lut_highcontrast": "High Contrast",
+        "imgly_lut_k1": "K1",
+        "imgly_lut_k6": "K6",
+        "imgly_lut_kdynamic": "KDynamic",
+        "imgly_lut_keen": "Keen",
+        "imgly_lut_lenin": "Lenin",
+        "imgly_lut_litho": "Litho",
+        "imgly_lut_lomo100": "Lomo 100",
+        "imgly_lut_lucid": "Lucid",
+        "imgly_lut_neat": "Neat",
+        "imgly_lut_nogreen": "No Green",
+        "imgly_lut_orchid": "Orchid",
+        "imgly_lut_pale": "Pale",
+        "imgly_lut_pitched": "Pitched",
+        "imgly_lut_plate": "Plate",
+        "imgly_lut_pola669": "Pola 669",
+        "imgly_lut_polasx": "Pola SX",
+        "imgly_lut_pro400": "Pro 400",
+        "imgly_lut_quozi": "Quozi",
+        "imgly_lut_sepiahigh": "Sepia High",
+        "imgly_lut_settled": "Settled",
+        "imgly_lut_seventies": "Seventies",
+        "imgly_lut_soft": "Soft",
+        "imgly_lut_steel": "Steel",
+        "imgly_lut_summer": "Summer",
+        "imgly_lut_sunset": "Sunset",
+        "imgly_lut_tender": "Tender",
+        "imgly_lut_twilight": "Twilight",
+        "imgly_lut_winter": "Winter",
+        "imgly_lut_x400": "X400"
+      }
+    },
+    "sticker": {
+      "flip": "Flip",
+      "flip-v": "Flip (V)",
+      "flip-h": "Flip (H)",
+      "takeToFront": "To Front",
+      "categories": {
+        "all": "All"
+      }
+    },
+    "brush": {
+      "size": "Size",
+      "color": "Color"
+    },
+    "frame": {
+      "noFrame": "No Frame",
+      "scale": "Scale"
+    }
+  },
+  "webcam": {
+    "headline": "Take a photo!"
+  },
+  "editor": {
+    "headline": "Edit Photo",
+    "new": "New",
+    "backgroundImage": "Background Image",
+    "undo": "Undo",
+    "export": "Export",
+    "zoom": "Zoom"
+  },
+  "splash": {
+    "upload": {
+      "button": "Upload your image",
+      "description": "Upload a picture from your library or just drag and drop"
+    },
+    "webcam": {
+      "headline": "Webcam",
+      "description": "Take a picture with your webcam or phone"
+    },
+    "photoRoll": {
+      "headline": "Free stock footage",
+      "description": "Select from thousands of Free Stock Photos"
+    }
+  },
+  "photoRoll": {
+    "search": {
+      "placeholder": "Search for photos",
+      "noSearchResults": "Sorry, but we couldn't find any photos for <strong>\"${query}\"</strong>.",
+      "results": {
+        "headline": "Search results for \"${query}\""
+      }
+    }
+  },
+  "generic": {
+    "back": "Back",
+    "cancel": "Cancel",
+    "color": "Color"
+  },
+  "loading": {
+    "resizing": "Resizing...",
+    "exporting": "Exporting...",
+    "loading": "Loading..."
+  },
+  "warnings": {
+    "imageResized_maxMegaPixels": {
+      "title": "Image resized",
+      "text": "Your image exceeds the maximum size of ${maxMegaPixels} megapixels and has therefore been resized to ${width}x${height} pixels."
+    },
+    "imageResized_maxDimensions": {
+      "title": "Image resized",
+      "text": "Due to hardware limitations your image has been resized to ${width}x${height} pixels."
+    }
+  },
+  "errors": {
+    "imageLoadFail": {
+      "title": "Failed to load image",
+      "text": "Failed to load the image at ${path}"
+    },
+    "webcamUnavailable": {
+      "title": "Webcam unavailable",
+      "text": "Unable to display webcam image (Error: ${error})"
+    },
+    "webcamNotSupported": {
+      "title": "Webcam not supported",
+      "text": "The webcam feature is not supported by your browser."
+    },
+    "renderingError": {
+      "title": "Error while rendering",
+      "text": "An error has occurred while rendering the image."
+    },
+    "context_lost": {
+      "title": "An error has occurred",
+      "text": "Your browser took too long to render the image. Please try applying less operations."
+    },
+    "context_lost_limit": {
+      "title": "An error has occurred",
+      "text": "Your browser failed multiple times while rendering the image."
+    },
+    "loadingStickersFailed": {
+      "title": "Failed to load stickers"
+    },
+    "loadingFontsFailed": {
+      "title": "Failed to load fonts",
+      "text": "Some fonts might not be available."
+    },
+    "photoRollLoadFail": {
+      "title": "Failed to load Photo Roll",
+      "text": "Failed to load photos for the photo roll: ${error}"
+    },
+    "invalidFileType": {
+      "text": "The file type ${fileType} is not supported."
+    },
+    "title": "An error has occurred"
+  }
+}
+```
+{% endcapture %}
+
+{% assign snippets = "" | split: "" | push: first_snippet | push: second_snippet %}
+{% capture identifier %}{{page.title}}-{{page.version}}-ANALYTICS-02{% endcapture %}
+{% include multilingual_code_block.html snippets=snippets identifier=identifier %}
