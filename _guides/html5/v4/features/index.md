@@ -13,5 +13,5 @@ tags: &tags # tags that are necessary
 
 published: true # Either published or not
 redirect_to:
-  - '/guides/html5/v4-DesktopUI/features/adjustments'
+  - '/guides/html5/v4/features/adjustments'
 ---

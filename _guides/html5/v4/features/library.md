@@ -115,6 +115,9 @@ The `Image` class takes 7 options, of which two are mandatory: `category` that s
 
 In order to make the UI use your provider, simply pass it as the `provider` option to the `library` control:
 
+{% capture second_snippet %}
+DesktopUI
+---
 ```js
 const editor = new PhotoEditorSDK.UI.DesktopUI({
   controlsOptions: {
@@ -124,6 +127,11 @@ const editor = new PhotoEditorSDK.UI.DesktopUI({
   }
 })
 ```
+{% endcapture %}
+
+{% assign snippets = "" | split: "" | push: second_snippet %}
+{% capture identifier %}{{page.title}}-{{page.version}}-ANALYTICS-06{% endcapture %}
+{% include multilingual_code_block.html snippets=snippets identifier=identifier %}
 
 {% capture second_snippet %}
 DesktopUI

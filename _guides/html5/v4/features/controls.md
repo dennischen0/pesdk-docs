@@ -5,7 +5,7 @@ title: &title Controls # title as shown in the menu and
 menuitem: *title
 order: 0
 platform: html5
-version: v4-ReactUI
+version: v4
 category:
   - guide
   - concept
