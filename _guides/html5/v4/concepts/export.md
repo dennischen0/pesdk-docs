@@ -16,8 +16,6 @@ tags: &tags # tags that are necessary
 published: true # Either published or not
 ---
 
-{% include html5_ui_badge.html react=true desktop=true %}
-
 To export the resulting image as an `Image` object or as a data url, you can use the [`export`](https://docs.photoeditorsdk.com/apidocs/html5/v4/PhotoEditorDesktopUI.html#export) method:
 
 ```js

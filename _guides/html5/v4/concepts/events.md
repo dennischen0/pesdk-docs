@@ -16,8 +16,6 @@ tags: &tags # tags that are necessary
 published: true # Either published or not
 ---
 
-{% include html5_ui_badge.html react=true desktop=true %}
-
 The UI emits events that let you know what happens inside the editor. Most users use these events
 for monitoring and analytics. You can listen to them by calling the UI's `on` method:
 

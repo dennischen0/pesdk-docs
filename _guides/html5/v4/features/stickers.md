@@ -26,8 +26,6 @@ published: true # Either published or not
 {% assign images = "" | split: "" | push: image_desktop | push: image_react %}
 {% include image_carousel.html images=images %}
 
-{% include html5_ui_badge.html react=true desktop=true %}
-
 The PhotoEditor SDK ships with a categorized sticker library whose UI is optimized for exploration and discovery. You can easily leverage the API to complement the library with your custom sticker packages.
 
 ## Adding custom stickers

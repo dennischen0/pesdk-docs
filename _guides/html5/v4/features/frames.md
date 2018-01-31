@@ -23,8 +23,6 @@ published: true # Either published or not
 {% assign images = "" | split: "" | push: image_desktop | push: image_react %}
 {% include image_carousel.html images=images %}
 
-{% include html5_ui_badge.html react=true desktop=true %}
-
 Good frames might not save bad paintings, however they may very well complete and enhance good photography. The PhotoEditor SDK includes a versatile frame tool that works with any given photo size or ratio. For the flexible frames tool that works perfectly for creatives with repeatable or stretchable areas, we abandoned the 9-patch standard and replaced it with a novel and even more flexible 12-patch layout.
 
 ## Adding custom frames

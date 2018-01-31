@@ -15,8 +15,6 @@ tags: &tags # tags that are necessary
 published: true # Either published or not
 ---
 
-{% include html5_ui_badge.html react=true desktop=false %}
-
 Since version 3.5.0 you can force users to use certain controls before using all other editor
 functions. In order to do that, you need to pass the `editor.forceControls` option which contains
 an array of objects in the following format:

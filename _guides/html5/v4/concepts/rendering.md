@@ -16,8 +16,6 @@ tags: &tags # tags that are necessary
 published: true # Either published or not
 ---
 
-{% include html5_ui_badge.html react=true desktop=true %}
-
 The SDK is the "back end" of the editor. It handles image rendering and image modification. If
 you're interested in building your own UI, or not using a UI at all, this is the way to go.
 

@@ -26,17 +26,19 @@ published: true # Either published or not
 {% assign images = "" | split: "" | push: image_desktop | push: image_react %}
 {% include image_carousel.html images=images %}
 
-{% include html5_ui_badge.html react=true desktop=true %}
-
 A picture says more than a thousand words, however sometimes it still takes a few more. The robust text feature of the PhotoEditor SDK provides all necessary functions for quickly adding text to any picture or creative. The corresponding font library can easily be exchanged, reduced, or expanded.
-
-
 
 ## Adding custom fonts
 
 You can add custom fonts by passing them using the `fonts` option.
 
-If `replaceFonts` is set to true, all default fonts are removed. If it is set to `false`, your additional fonts are appended.
+If `replaceFonts` is set to true, all default fonts are removed. If it is set to `false`, youur additional fonts are appended.
+
+# Text Metrics
+
+Due to the lack of support for font measurement and precise layouting, the SDK relies font metrics from the fonts used in the editor. These are provided for all default fonts and can be easily added along with your custom fonts.
+
+**WARNING**: If you do not provide font metrics for your custom font, the SDK will issue a warning during load and you may experience cut off or jumping text. To quickly collect the required metrics, we recommend the [Opentype Font Inspector](https://opentype.js.org/font-inspector.html). Just upload your font file and extract `unitsPerEm` from the _Font Header table_, as well as `ascender` and `descender` from the _Horizontal Header Table_.
 
 ### Adding system fonts
 
@@ -51,11 +53,19 @@ const editor = new PhotoEditorSDK.UI.DesktopUI({
           fontFamily: 'Comic Sans MS', // The font family name
           variations: [
             {
-              identifier: 'comicsans_regular'
+              identifier: 'comicsans_regular',
+              textMetrics: { // For best rendering, you'll need to determine the metrics manually
+                unitsPerEm: 1000,
+                ascender: 1026,
+                descender: -432
+              }
             },
             {
               identifier: 'comicsans_bold',
-              fontWeight: 'bold'
+              fontWeight: 'bold',
+              textMetrics: {
+                //...
+              }
             }
           ]
         }
@@ -79,7 +89,12 @@ const editor = new PhotoEditorSDK.UI.DesktopUI({
           variations: [
             {
               identifier: 'shrikhand',
-              provider: 'google' // This loads the font from Google Fonts
+              provider: 'google',  // This loads the font from Google Fonts
+              textMetrics: { // For best rendering, you'll need to determine the metrics manually
+                unitsPerEm: 1000,
+                ascender: 1026,
+                descender: -432
+              }
             }
           ]
         }
@@ -104,7 +119,12 @@ const editor = new PhotoEditorSDK.UI.DesktopUI({
             {
               identifier: 'custom_font', // A unique identifier for this font
               provider: 'file',
-              filePath: 'fonts/Custom-Font.woff'
+              filePath: 'fonts/Custom-Font.woff',
+              textMetrics: {
+                unitsPerEm: 2048,
+                ascender: 500,
+                descender: -400
+              }
             }
           ]
         }

@@ -26,8 +26,6 @@ published: true # Either published or not
 {% assign images = "" | split: "" | push: image_desktop | push: image_react %}
 {% include image_carousel.html images=images %}
 
-{% include html5_ui_badge.html react=true desktop=true %}
-
 Our Adjustment tool is our swiss army knife for image optimization. It offers essential functions like brightness and contrast, while allowing more expert users to fine tune highlights, shadows and clarity.
 
 # Specifying which adjustments are available

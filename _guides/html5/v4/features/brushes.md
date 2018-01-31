@@ -26,33 +26,31 @@ published: true # Either published or not
 {% assign images = "" | split: "" | push: image_desktop | push: image_react %}
 {% include image_carousel.html images=images %}
 
-{% include html5_ui_badge.html react=true desktop=true %}
-
 The highly efficient brush engine of the PhotoEditor SDK is optimized for touch screen interaction and supports different brush strokes that can be edited in terms of thickness and color.
 
+## Specifying brush presets
 
-## Localization
+In order to specify brush size presets, use the `sizePresets` option:
 
-### Overlay name
-
-By default, our UI displays each overlay's `defaultName` as the overlay label. You can override this value for each overlay by overriding or adding new keys to the `controls.overlay.overlays` object in the [Localization JSON]({{ site.baseurl }}/guides/{{page.platform}}/{{page.version}}/concepts/localization) file:
-
+{% capture second_snippet %}
+ReactUI
+---
 ```js
-{
-  "editor": {
-    "controls": {
-      // ...
-      "overlay": {
-        // ...
-        "overlays": {
-          // ...
-          "my_overlay": "Customly localized overlay name"
-          // ...
-        }
-        // ...
-      }
-      // ...
+const editor = new PhotoEditorSDK.UI.ReactUI({
+  controlsOptions: {
+    brush: {
+      sizePresets: [
+        0.01, 0.02, 0.03, 0.05, 0.1
+      ]
     }
   }
-}
+})
 ```
+{% endcapture %}
+
+{% assign snippets = "" | split: "" | push: second_snippet %}
+{% capture identifier %}{{page.title}}-{{page.version}}-ANALYTICS{% endcapture %}
+{% include multilingual_code_block.html snippets=snippets identifier=identifier %}
+
+Please note that the thickness is relative to the shortest edge of your image. If your image is 200x500 pixels and the brush thickness is 0.05, the final thickness on the image will be
+`200 * 0.05 = 10 pixels`.

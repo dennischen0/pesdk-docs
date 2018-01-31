@@ -16,8 +16,6 @@ published: true # Either published or not
 ---
 ![{{page.title}} tool]({{ site.baseurl }}/assets/images/guides/{{page.platform | downcase }}/{{page.version | downcase}}/{{page.title | downcase}}.jpg){: .center-image style="padding: 20px; max-height: 400px;"}
 
-{% include html5_ui_badge.html react=false desktop=true %}
-
 ## Adding custom overlay images
 
 In order to add custom overlay images to your UI, you can pass them using the `overlays` option of the `overlay` control:
