@@ -371,6 +371,14 @@ ReactUI
     },
     "filter": {
       "intensity": "Intensity",
+      "categories": {
+        "imgly_filters_winter": "Winter",
+        "imgly_filters_summer": "Summer",
+        "imgly_filters_bw": "Black & White",
+        "imgly_filters_analog": "Analog",
+        "imgly_filters_retro": "Retro",
+        "imgly_filters_special": "Special"
+      },
       "filters": {
         "identity": "None",
         "imgly_lut_ad1920": "1920 A.D.",
