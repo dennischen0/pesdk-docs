@@ -14,12 +14,16 @@ tags: &tags # tags that are necessary
 
 published: true # Either published or not
 ---
+
 ![{{page.title}} tool]({{ site.baseurl }}/assets/images/guides/{{page.platform | downcase }}/{{page.version | downcase}}/{{page.title | downcase}}.jpg){: .center-image style="padding: 20px; max-height: 400px;"}
 
 ## Adding custom overlay images
 
 In order to add custom overlay images to your UI, you can pass them using the `overlays` option of the `overlay` control:
 
+{% capture second_snippet %}
+DesktopUI
+---
 ```js
 const editor = new PhotoEditorSDK.UI.DesktopUI({
   controlsOptions: {
@@ -38,6 +42,11 @@ const editor = new PhotoEditorSDK.UI.DesktopUI({
   }
 })
 ```
+{% endcapture %}
+
+{% assign snippets = "" | split: "" | push: second_snippet %}
+{% capture identifier %}{{page.title}}-{{page.version}}-ANALYTICS{% endcapture %}
+{% include multilingual_code_block.html snippets=snippets identifier=identifier %}
 
 Available blend modes are `normal`, `overlay`, `hard light`, `soft light`, `multiply`, `darken`, `lighten`, `screen` and `color burn`.
 

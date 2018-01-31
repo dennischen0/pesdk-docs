@@ -34,6 +34,9 @@ In order to enable or disable specific focus modes, simply pass the `availableMo
 the focus controls. This option should be an array of focus identifiers of which the following
 are available: `radial`, `mirrored`, `linear`, `gaussian`.
 
+{% capture first_snippet %}
+DesktopUI
+---
 ```js
 const editor = new PhotoEditorSDK.UI.DesktopUI({
   controlsOptions: {
@@ -43,3 +46,22 @@ const editor = new PhotoEditorSDK.UI.DesktopUI({
   }
 })
 ```
+{% endcapture %}
+
+{% capture second_snippet %}
+ReactUI
+---
+```js
+const editor = new PhotoEditorSDK.UI.ReactUI({
+  controlsOptions: {
+    focus: {
+      availableModes: ['radial', 'mirrored', 'linear', 'gaussian']
+    }
+  }
+})
+```
+{% endcapture %}
+
+{% assign snippets = "" | split: "" | push: first_snippet | push: second_snippet %}
+{% capture identifier %}{{page.title}}-{{page.version}}-ANALYTICS{% endcapture %}
+{% include multilingual_code_block.html snippets=snippets identifier=identifier %}

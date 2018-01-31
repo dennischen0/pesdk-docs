@@ -46,6 +46,9 @@ The left and right group consist of a stretched border texture, and a start and 
 
 The code to create such a frame and pass it to the editor looks like this:
 
+{% capture first_snippet %}
+DesktopUI
+---
 ```js
 const editor = new PhotoEditorSDK.UI.DesktopUI({
   controlsOptions: {
@@ -88,4 +91,55 @@ const editor = new PhotoEditorSDK.UI.DesktopUI({
   }
 })
 ```
+{% endcapture %}
 
+{% capture second_snippet %}
+ReactUI
+---
+```js
+const editor = new PhotoEditorSDK.UI.ReactUI({
+  controlsOptions: {
+    frame: {
+      frames: [
+        {
+          identifier: 'dia',
+          defaultName: 'Dia',
+          layoutMode: 'horizontal-inside',
+          thumbnail: 'frames/dia/icon.png',
+          imageGroups: {
+            top: {
+              mid: {
+                image: 'frames/dia/dia_top.png',
+                mode: 'repeat'
+              }
+            },
+            left: {
+              start: 'frames/dia/dia_top_left.png',
+              mid: 'frames/dia/dia_left.png',
+              end: 'frames/dia/dia_bottom_left.png'
+            },
+            right: {
+              start: 'frames/dia/dia_top_right.png',
+              mid: 'frames/dia/dia_right.png',
+              end: 'frames/dia/dia_bottom_right.png'
+            },
+            bottom: {
+              mid: {
+                image: 'frames/dia/dia_bottom.png',
+                mode: 'repeat'
+              }
+            }
+          }
+        }
+      ],
+      replaceFrames: false, // Specifies whether `frames` should replace all existing frames
+      availableFrames: ['dia'] // Only enables our new frame. Leave this out to enable all frames.
+    }
+  }
+})
+```
+{% endcapture %}
+
+{% assign snippets = "" | split: "" | push: first_snippet | push: second_snippet %}
+{% capture identifier %}{{page.title}}-{{page.version}}-ANALYTICS{% endcapture %}
+{% include multilingual_code_block.html snippets=snippets identifier=identifier %}

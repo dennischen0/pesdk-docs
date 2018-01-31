@@ -34,6 +34,10 @@ In order to enable or disable specific adjustments, simply pass the `availableAd
 the adjustments controls. This option should be an array of adjustment identifiers of which the following
 are available: `brightness`, `saturation`, `contrast`, `gamma`, `clarity`, `exposure`, `shadows`, `highlights`
 
+
+{% capture first_snippet %}
+DesktopUI
+---
 ```js
 const editor = new PhotoEditorSDK.UI.DesktopUI({
   controlsOptions: {
@@ -43,3 +47,22 @@ const editor = new PhotoEditorSDK.UI.DesktopUI({
   }
 })
 ```
+{% endcapture %}
+
+{% capture second_snippet %}
+ReactUI
+---
+```js
+const editor = new PhotoEditorSDK.UI.ReactUI({
+  controlsOptions: {
+    focus: {
+      availableModes: ['brightness', 'saturation', 'contrast']
+    }
+  }
+})
+```
+{% endcapture %}
+
+{% assign snippets = "" | split: "" | push: first_snippet | push: second_snippet %}
+{% capture identifier %}{{page.title}}-{{page.version}}-ANALYTICS{% endcapture %}
+{% include multilingual_code_block.html snippets=snippets identifier=identifier %}

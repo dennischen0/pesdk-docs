@@ -45,6 +45,9 @@ Afterwards, you'll need to add the LUT image to the filter options. Filters are 
 
 If `replaceCategories` is set to true, only your custom filter categories and filters will be displayed.
 
+{% capture first_snippet %}
+DesktopUI
+---
 ```js
 const editor = new PhotoEditorSDK.UI.DesktopUI({
   controlsOptions: {
@@ -66,11 +69,45 @@ const editor = new PhotoEditorSDK.UI.DesktopUI({
   }
 })
 ```
+{% endcapture %}
+
+{% capture second_snippet %}
+ReactUI
+---
+```js
+const editor = new PhotoEditorSDK.UI.ReactUI({
+  controlsOptions: {
+    filters: {
+      categories: [
+        {
+          identifier: 'my_category', // A unique identifier for this filter category
+          defaultName: 'My Category', // The default translation for this filter category
+          filters: [
+            {
+              identifier: 'my_custom_lut', // A unique identifier for this filter
+              defaultName: 'Custom LUT', // The default translation for this filter
+              lutImage: 'filters/my_custom_lut.png' // The path to the LUT image
+            }
+          ]
+        }
+      ]
+    }
+  }
+})
+```
+{% endcapture %}
+
+{% assign snippets = "" | split: "" | push: first_snippet | push: second_snippet %}
+{% capture identifier %}{{page.title}}-{{page.version}}-ANALYTICS{% endcapture %}
+{% include multilingual_code_block.html snippets=snippets identifier=identifier %}
 
 ## Specifying the available filters
 
 By default, all existing filters (including your own) are available to the user. To make only specific filters available to the user, use the `availableFilters` option.
 
+{% capture first_snippet02 %}
+DesktopUI
+---
 ```js
 const editor = new PhotoEditorSDK.UI.DesktopUI({
   controlsOptions: {
@@ -80,6 +117,25 @@ const editor = new PhotoEditorSDK.UI.DesktopUI({
   }
 })
 ```
+{% endcapture %}
+
+{% capture second_snippet02 %}
+ReactUI
+---
+```js
+const editor = new PhotoEditorSDK.UI.ReactUI({
+  controlsOptions: {
+    filter: {
+      availableFilters: ['imgly_lut_ad1920', 'imgly_lut_blues']
+    }
+  }
+})
+```
+{% endcapture %}
+
+{% assign snippets02 = "" | split: "" | push: first_snippet02 | push: second_snippet02 %}
+{% capture identifier02 %}{{page.title}}-{{page.version}}-ANALYTICS02{% endcapture %}
+{% include multilingual_code_block.html snippets=snippets02 identifier=identifier02 %}
 
 ## Localization
 

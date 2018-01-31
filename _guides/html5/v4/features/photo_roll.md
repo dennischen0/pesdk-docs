@@ -25,6 +25,9 @@ Search Queries and Photos.
 
 You can make the editor use the Provider by passing it via the `photoRoll.provider` option:
 
+{% capture second_snippet %}
+ReactUI
+---
 ```js
   const editor = new PhotoEditorSDK.UI.ReactUI({
     photoRoll: {
@@ -32,12 +35,20 @@ You can make the editor use the Provider by passing it via the `photoRoll.provid
     }
   })
 ```
+{% endcapture %}
+
+{% assign snippets = "" | split: "" | push: second_snippet %}
+{% capture identifier %}{{page.title}}-{{page.version}}-ANALYTICS{% endcapture %}
+{% include multilingual_code_block.html snippets=snippets identifier=identifier %}
 
 ## getLibraries()
 
 This method returns a Promise that should be resolved with an Array of `PhotoEditorSDK.UI.ReactUI.PhotoRoll.Library`
 instances. Here is an example that returns one library called `Photos` and a cover image:
 
+{% capture second_snippet %}
+ReactUI
+---
 ```js
 const { PhotoRoll } = PhotoEditorSDK.UI.ReactUI
 class UnsplashProvider extends PhotoRoll {
@@ -55,6 +66,11 @@ class UnsplashProvider extends PhotoRoll {
   }
 }
 ```
+{% endcapture %}
+
+{% assign snippets = "" | split: "" | push: second_snippet %}
+{% capture identifier %}{{page.title}}-{{page.version}}-ANALYTICS-02{% endcapture %}
+{% include multilingual_code_block.html snippets=snippets identifier=identifier %}
 
 The library will now be presented to the user like this:
 ![Photoroll Library]({{ site.baseurl }}/assets/images/guides/{{page.platform | downcase }}/{{page.version | downcase}}/photoroll-library.png){: .center-image style="padding: 20px; max-height: 400px;"}
@@ -64,6 +80,9 @@ This method returns a Promise that should be resolved with an Array of `PhotoEdi
 instances. This method can either access a remote server that responds with JSON, parse the JSON and
 display images from a remote source, or just return a fixed number of images, like in this example:
 
+{% capture second_snippet %}
+ReactUI
+---
 ```js
 const { PhotoRoll } = PhotoEditorSDK.UI.ReactUI
 class UnsplashProvider extends PhotoRoll {
@@ -88,6 +107,11 @@ class UnsplashProvider extends PhotoRoll {
   }
 }
 ```
+{% endcapture %}
+
+{% assign snippets = "" | split: "" | push: second_snippet %}
+{% capture identifier %}{{page.title}}-{{page.version}}-ANALYTICS-03{% endcapture %}
+{% include multilingual_code_block.html snippets=snippets identifier=identifier %}
 
 The photo will now be presented to the user like this:
 
@@ -98,6 +122,9 @@ The photo will now be presented to the user like this:
 This method returns a Promise that should be resolved with an Array of `PhotoEditorSDK.UI.ReactUI.PhotoRoll.SearchSuggestion`
 instances. Here is an example that returns one search suggestion with the search term `Nature`:
 
+{% capture second_snippet %}
+ReactUI
+---
 ```js
 const { PhotoRoll } = PhotoEditorSDK.UI.ReactUI
 class UnsplashProvider extends PhotoRoll {
@@ -115,6 +142,11 @@ class UnsplashProvider extends PhotoRoll {
   }
 }
 ```
+{% endcapture %}
+
+{% assign snippets = "" | split: "" | push: second_snippet %}
+{% capture identifier %}{{page.title}}-{{page.version}}-ANALYTICS-04{% endcapture %}
+{% include multilingual_code_block.html snippets=snippets identifier=identifier %}
 
 The search suggestion will now be presented to the user like this:
 
@@ -130,6 +162,9 @@ This method returns a Promise that should be resolved with an Array of `PhotoEdi
 instances. Here is an example that calls `getPhotosForLibrary(null)`, which will return an array of Photos.
 It will then filter the results and return only the results that contain at least one of the search terms:
 
+{% capture second_snippet %}
+ReactUI
+---
 ```js
 const { PhotoRoll } = PhotoEditorSDK.UI.ReactUI
 class UnsplashProvider extends PhotoRoll {
@@ -150,3 +185,8 @@ class UnsplashProvider extends PhotoRoll {
   }
 }
 ```
+{% endcapture %}
+
+{% assign snippets = "" | split: "" | push: second_snippet %}
+{% capture identifier %}{{page.title}}-{{page.version}}-ANALYTICS-05{% endcapture %}
+{% include multilingual_code_block.html snippets=snippets identifier=identifier %}

@@ -24,6 +24,10 @@ With our library control, users can upload their own pictures, take photo with t
 
 The Provider class is the data manager for our library feature. Extend this class in order to load data from an external source or provide a fixed set of images. Your custom provider needs to implement two categories: `getCategories` and `searchImages(query)` which will be invoked by our UI. Please note that these methods are asynchronous and must return a Promise.
 
+{% capture second_snippet %}
+DesktopUI
+---
+
 ```js
 const { Provider, Category, Image } = PhotoEditorSDK.UI.DesktopUI.Library
 class MyProvider extends Provider {
@@ -97,6 +101,11 @@ class MyProvider extends Provider {
   }
 }
 ```
+{% endcapture %}
+
+{% assign snippets = "" | split: "" | push: second_snippet %}
+{% capture identifier %}{{page.title}}-{{page.version}}-ANALYTICS{% endcapture %}
+{% include multilingual_code_block.html snippets=snippets identifier=identifier %}
 
 The `Category` class takes two options: `name` of type `string` and `coverImage` of type `string`.
 
@@ -116,10 +125,32 @@ const editor = new PhotoEditorSDK.UI.DesktopUI({
 })
 ```
 
+{% capture second_snippet %}
+DesktopUI
+---
+```js
+const editor = new PhotoEditorSDK.UI.DesktopUI({
+  controlsOptions: {
+    library: {
+      provider: MyProvider
+    }
+  }
+})
+```
+{% endcapture %}
+
+{% assign snippets = "" | split: "" | push: second_snippet %}
+{% capture identifier %}{{page.title}}-{{page.version}}-ANALYTICS-02{% endcapture %}
+{% include multilingual_code_block.html snippets=snippets identifier=identifier %}
+
 # Disabling the webcam / upload
 
 By default, your users are able to take photos using their webcam or upload their own photos using a file picker. In order to disable these features, simply set the `enableWebcam` or the `enableUpload` (which also includes the webcam) to `false`.
 
+
+{% capture second_snippet %}
+DesktopUI
+---
 ```js
 const editor = new PhotoEditorSDK.UI.DesktopUI({
   controlsOptions: {
@@ -130,3 +161,8 @@ const editor = new PhotoEditorSDK.UI.DesktopUI({
   }
 })
 ```
+{% endcapture %}
+
+{% assign snippets = "" | split: "" | push: second_snippet %}
+{% capture identifier %}{{page.title}}-{{page.version}}-ANALYTICS-03{% endcapture %}
+{% include multilingual_code_block.html snippets=snippets identifier=identifier %}
